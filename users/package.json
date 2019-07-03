@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db.json"
+    "json:server": "json-server --watch db.json",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "graphql": "^14.4.1",
     "json-server": "^0.15.0",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

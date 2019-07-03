@@ -3,3 +3,5 @@
 # npm i --save json-server
 
 # npm i --save axios
+
+# npm i --save-dev nodemon
