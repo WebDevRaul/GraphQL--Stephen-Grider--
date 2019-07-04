@@ -5,7 +5,8 @@ const {
   GraphQLString,
   GraphQLInt,
   GraphQLSchema,
-  GraphQLList
+  GraphQLList,
+
 } = graphql;
 
 const CompanyType = new GraphQLObjectType({
@@ -65,6 +66,24 @@ const RootQuery = new GraphQLObjectType({
     }
   }
 });
+
+const mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addUser: {
+      type: UserType,
+      args: {
+        first_name: { type: GraphQLString },
+        age: { type: GraphQLInt },
+        companyId: { type: GraphQLString }
+      },
+      resolve() {
+
+      }
+    }
+  }
+});
+
 
 module.exports = new GraphQLSchema({ 
   query: RootQuery
