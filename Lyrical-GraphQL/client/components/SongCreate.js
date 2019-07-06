@@ -8,11 +8,17 @@ class SongCreate extends Component {
     }
   }
 
+  onSubmit(e) {
+    e.preventDefault();
+
+    
+  }
+
   render() {
     return (
       <div>
         <h3>Create a New Song</h3>
-        <form>
+        <form onSubmit={this.onSubmit.bind(this)}>
           <label>Song Title</label>
           <input
             value={this.state.title}  
