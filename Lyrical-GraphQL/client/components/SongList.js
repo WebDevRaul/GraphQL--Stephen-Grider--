@@ -6,11 +6,22 @@ import gql from 'graphql-tag';
 
 class SongList extends Component {
 
+  onSongDelete(id) {
+    this.props.mutate({
+      variables: { id },
+      refetchQueries: [{ query }]
+    });
+  }
+
   renderSongs() {
     return this.props.data.songs.map(song => {
       return (
         <div key={song.id} className='collection-item'>
           {song.title}
+          <i 
+            className='material-icons'
+            onClick={() => this.onSongDelete(song.id)}
+          >delete</i>
         </div>
       )
     })
