@@ -4,6 +4,9 @@ import ApolloClient from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
+// Css
+import './style/style.css';
+
 // Components
 import App from './components/App';
 import SongList from './components/SongList';
